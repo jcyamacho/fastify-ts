@@ -4,8 +4,8 @@
   "description": "fastify typescript",
   "main": "dist/app.js",
   "engines": {
-    "node": "^12.16.1",
-    "npm": "^6.13.7"
+    "node": "^12.18.0",
+    "npm": "^6.14.5"
   },
   "scripts": {
     "build": "tsc --build tsconfig.json",
@@ -17,6 +17,7 @@
     "start": "fastify start -l info dist/app.js",
     "dev": "fastify start -l info -P dist/app.js",
     "predev": "npm run build",
+    "release": "standard-version",
     "cz": "git-cz"
   },
   "author": "Juan C. Yamacho <jcyamacho@gmail.com>",
@@ -56,18 +57,13 @@
     "npm-run-all": "^4.1.5",
     "prettier": "^2.0.5",
     "rimraf": "^3.0.2",
+    "standard-version": "^8.0.0",
     "ts-jest": "^26.1.0",
     "typescript": "^3.9.5"
   },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
-    }
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm test",
-      "prepare-commit-msg": "exec < /dev/tty && npm run cz -- --hook || true"
     }
   }
 }
