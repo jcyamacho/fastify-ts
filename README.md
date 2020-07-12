@@ -7,4 +7,4 @@
 
 
 ## DEPRECATED
-recomended: **npx fastify-cli generate <name> --lang=ts**
+recomended: `npx fastify-cli generate <name> --lang=ts`
